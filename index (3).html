@@ -1,0 +1,2412 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <!-- Meta Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '786258557492620');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=786258557492620&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
+    <title>Practical System to Build Income from Instagram & Facebook</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+    <!-- Google Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Animate.css for animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <!-- AOS CSS for scroll animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "v85t9ikocl");
+    </script>
+
+    <style>
+        :root {
+            --primary: #0092B9;
+            /* Main Color */
+            --primary-dark: #1e4fb0;
+            /* darker shade */
+            --secondary: #0092B9;
+            /* updated to main color */
+            --accent: #0092B9;
+            /* updated to main color */
+            --dark: #111827;
+            /* Text color */
+            --light: #FFFFFF;
+            /* Background */
+        }
+
+        * {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary) 100%);
+        }
+
+        .hero-bg {
+            /* background:linear-gradient(rgba(37, 99, 235, 0.85), rgba(30, 79, 176, 0.9)), url('https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80'); */
+            background: linear-gradient(rgba(0, 146, 185, 0.4),
+                    rgba(0, 146, 185, 0.5));
+            /* url('https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80'); */
+
+
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .card-shadow {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .card-shadow:hover {
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+            transform: translateY(-8px);
+        }
+
+        /* FIXED: Improved Video Container for Mobile */
+        .video-container-responsive {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            border-radius: 20px;
+            background: linear-gradient(to bottom right, #1e3c72, #2a5298);
+            margin: 0 auto;
+        }
+
+        /* Responsive video aspect ratio */
+        .video-container-responsive::before {
+            content: '';
+            display: block;
+            padding-top: 56.25%;
+            /* 16:9 Aspect Ratio for better mobile display */
+        }
+
+        .video-placeholder {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        /* Mobile-specific video adjustments */
+        @media (max-width: 768px) {
+            .video-container-responsive::before {
+                padding-top: 75%;
+                /* Slightly taller for mobile */
+            }
+
+            .video-placeholder h3 {
+                font-size: 1.25rem;
+                margin-bottom: 12px;
+            }
+
+            .video-placeholder p {
+                font-size: 0.9rem;
+                margin-bottom: 16px;
+            }
+        }
+
+        /* For very small screens */
+        @media (max-width: 480px) {
+            .video-container-responsive {
+                border-radius: 16px;
+            }
+
+            .video-container-responsive::before {
+                padding-top: 100%;
+                /* Square aspect for very small screens */
+            }
+        }
+
+        /* For tablets and larger */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .video-container-responsive::before {
+                padding-top: 66.67%;
+                /* 3:2 Aspect Ratio */
+            }
+        }
+
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary) 100%);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .feature-icon i {
+            font-size: 32px;
+            color: white;
+        }
+
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .float-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        .bg-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23052e87' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .section-divider {
+            height: 4px;
+            width: 100px;
+            background: linear-gradient(to right, var(--primary), var(--primary));
+            border-radius: 2px;
+            margin: 20px auto;
+        }
+
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.95);
+            transition: all 0.3s ease;
+        }
+
+        .sticky-nav.scrolled {
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary) 100%);
+            color: white;
+            font-weight: 600;
+            padding: 16px 32px;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
+            display: inline-block;
+            text-align: center;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(37, 99, 235, 0.4);
+        }
+
+        .primary-button {
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary) 100%);
+            color: white;
+            font-weight: 600;
+            padding: 8px 16px;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
+            display: inline-block;
+            text-align: center;
+        }
+
+        .primary-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(37, 99, 235, 0.4);
+        }
+
+        .testimonial-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .testimonial-card:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(to right, var(--primary), var(--primary));
+            border-radius: 20px 20px 0 0;
+        }
+
+        .offer-badge {
+            position: absolute;
+            top: -15px;
+            right: 20px;
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 14px;
+            box-shadow: 0 5px 15px rgba(37, 99, 235, 0.4);
+        }
+
+        .counter-box {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .counter-number {
+            font-size: 42px;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+
+        .progress-ring {
+            width: 120px;
+            height: 120px;
+        }
+
+        .progress-ring-circle {
+            stroke-dasharray: 314;
+            stroke-dashoffset: 314;
+            animation: progress-fill 2s ease-out forwards;
+            animation-delay: 0.5s;
+        }
+
+        @keyframes progress-fill {
+            to {
+                stroke-dashoffset: 78.5;
+            }
+
+            /* 75% filled */
+        }
+
+        /* Mobile menu animation */
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+        }
+
+        .mobile-menu.open {
+            max-height: 500px;
+        }
+
+        /* IMPROVED: Reduced gaps between sections and elements */
+        .section-padding {
+            padding-top: 4rem;
+            padding-bottom: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            .section-padding {
+                padding-top: 3rem;
+                padding-bottom: 3rem;
+            }
+        }
+
+        /* Reduced gap utility classes */
+        .gap-reduced {
+            gap: 1.5rem !important;
+        }
+
+        .gap-tight {
+            gap: 1rem !important;
+        }
+
+        @media (max-width: 768px) {
+            .gap-reduced {
+                gap: 1rem !important;
+            }
+
+            .gap-tight {
+                gap: 0.75rem !important;
+            }
+        }
+
+        /* Better spacing for mobile */
+        .mobile-spacing {
+            margin-bottom: 1.5rem !important;
+        }
+
+        @media (max-width: 768px) {
+            .mobile-spacing {
+                margin-bottom: 1rem !important;
+            }
+
+            h1 {
+                font-size: 2rem !important;
+                line-height: 1.2 !important;
+            }
+
+            h2 {
+                font-size: 1.75rem !important;
+                line-height: 1.3 !important;
+            }
+
+            h3 {
+                font-size: 2rem !important;
+            }
+
+            p,
+            li,
+            span {
+                font-size: 0.95rem !important;
+            }
+        }
+
+        /* Better button sizing for mobile */
+        @media (max-width: 768px) {
+
+            .cta-button,
+            .primary-button {
+                padding: 14px 24px;
+                font-size: 1rem;
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+
+        /* Improved grid gaps */
+        .grid-improved {
+            gap: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .grid-improved {
+                gap: 1rem;
+            }
+        }
+
+        /* Text alignment for mobile */
+        .text-center-mobile {
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .text-center-mobile {
+                text-align: center !important;
+            }
+        }
+
+        /* Primary text color */
+        .primary-text {
+            color: var(--primary);
+        }
+
+        /* Gradient text */
+        .gradient-text {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* RESPONSIVE IMPROVEMENTS */
+        .responsive-container {
+            width: 100%;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+        @media (min-width: 640px) {
+            .responsive-container {
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .responsive-container {
+                padding-left: 2rem;
+                padding-right: 2rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .responsive-container {
+                padding-left: 4rem;
+                padding-right: 4rem;
+            }
+        }
+
+        /* Responsive font sizes */
+        .responsive-heading-1 {
+            font-size: 1.875rem;
+            line-height: 2.25rem;
+        }
+
+        @media (min-width: 768px) {
+            .responsive-heading-1 {
+                font-size: 2.25rem;
+                line-height: 2.5rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .responsive-heading-1 {
+                font-size: 3rem;
+                line-height: 1;
+            }
+        }
+
+        .responsive-heading-2 {
+            font-size: 1.5rem;
+            line-height: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .responsive-heading-2 {
+                font-size: 1.875rem;
+                line-height: 2.25rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .responsive-heading-2 {
+                font-size: 2.25rem;
+                line-height: 2.5rem;
+            }
+        }
+
+        /* Responsive video aspect ratio fix */
+        .video-responsive-fix {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            height: 0;
+        }
+
+        .video-responsive-fix video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Responsive grid columns */
+        .responsive-grid {
+            display: grid;
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+            gap: 1.5rem;
+        }
+
+        @media (min-width: 640px) {
+            .responsive-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (min-width: 768px) {
+            .responsive-grid {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .responsive-grid {
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+            }
+        }
+
+        /* Hide elements on specific devices */
+        .hide-on-mobile {
+            display: none;
+        }
+
+        @media (min-width: 768px) {
+            .hide-on-mobile {
+                display: block;
+            }
+        }
+
+        .show-on-mobile {
+            display: block;
+        }
+
+        @media (min-width: 768px) {
+            .show-on-mobile {
+                display: none;
+            }
+        }
+
+        /* Touch-friendly buttons */
+        .touch-button {
+            min-height: 44px;
+            min-width: 44px;
+            padding: 12px 20px;
+        }
+
+        /* Responsive margins */
+        .responsive-margin {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .responsive-margin {
+                margin-top: 2rem;
+                margin-bottom: 2rem;
+            }
+        }
+
+        /* Fix for mobile overflow */
+        .overflow-fix {
+            overflow-x: hidden;
+            max-width: 100%;
+        }
+
+        /* Mobile-specific fixes */
+        @media (max-width: 767px) {
+
+            /* Ensure content doesn't overflow on mobile */
+            .mobile-full-width {
+                width: 100% !important;
+                max-width: 100% !important;
+                padding-left: 0.5rem !important;
+                padding-right: 0.5rem !important;
+            }
+
+            /* Adjust font sizes for better readability */
+            .mobile-text-sm {
+                font-size: 0.875rem !important;
+                line-height: 1.25rem !important;
+            }
+
+            .mobile-text-base {
+                font-size: 1rem !important;
+                line-height: 1.5rem !important;
+            }
+
+            .mobile-text-lg {
+                font-size: 1.125rem !important;
+                line-height: 1.75rem !important;
+            }
+
+            /* Stack elements vertically on mobile */
+            .mobile-stack {
+                flex-direction: column !important;
+                align-items: center !important;
+            }
+
+            /* Center align text on mobile */
+            .mobile-text-center {
+                text-align: center !important;
+            }
+
+            /* Remove horizontal scroll */
+            .mobile-no-scroll {
+                overflow-x: hidden !important;
+            }
+
+            /* Adjust padding for mobile */
+            .mobile-padding {
+                padding: 1rem !important;
+            }
+
+            /* Adjust margin for mobile */
+            .mobile-margin {
+                margin: 0.5rem !important;
+            }
+
+            /* Make images responsive */
+            .mobile-img {
+                max-width: 100% !important;
+                height: auto !important;
+            }
+
+            /* Adjust grid gaps for mobile */
+            .mobile-grid-gap {
+                gap: 0.75rem !important;
+            }
+        }
+
+        /* Tablet-specific fixes */
+        @media (min-width: 768px) and (max-width: 1023px) {
+            .tablet-full-width {
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+
+            .tablet-text-center {
+                text-align: center !important;
+            }
+
+            .tablet-stack {
+                flex-direction: column !important;
+                align-items: center !important;
+            }
+
+            .tablet-padding {
+                padding: 1.5rem !important;
+            }
+        }
+
+        /* Prevent text overflow */
+        .text-overflow-fix {
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            word-break: break-word;
+        }
+
+        /* Smooth transitions */
+        .smooth-transition {
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* Ensure all clickable elements are touch-friendly */
+        button,
+        a,
+        input[type="submit"],
+        input[type="button"] {
+            cursor: pointer;
+        }
+
+        /* Improve form elements for mobile */
+        input,
+        select,
+        textarea {
+            font-size: 16px;
+            /* Prevents iOS zoom on focus */
+        }
+
+        /* Prevent unwanted horizontal scroll */
+        html,
+        body {
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+        /* Ensure proper tap targets */
+        @media (max-width: 768px) {
+            .tap-target {
+                min-height: 44px;
+                min-width: 44px;
+            }
+
+            /* Adjust video player for mobile */
+            video {
+                width: 100%;
+                height: auto;
+            }
+
+            /* Fix for success stories videos */
+            .success-video-container {
+                position: relative;
+                width: 100%;
+                padding-top: 177.77%;
+            }
+
+            .success-video-container video {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        /* Add to your existing CSS */
+        @media (max-width: 768px) {
+            .nav-logo {
+                max-height: 45px !important;
+                height: 45px !important;
+                width: auto !important;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-[#FFFFFF] text-[#111827] overflow-fix">
+
+    <!-- Navigation -->
+
+
+
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg  pb-6 sm:pt-8 sm:pb-8 md:pt-16 md:pb-14 relative overflow-hidden">
+        <nav class="sticky lg:fixed top-0 left-0 w-full z-50">
+
+            <!-- Navigation -->
+            <!-- Gradient Background Full Width -->
+            <div class=" bg-gradient-to-r from-[#0092B9] to-[#0092B9] 
+                        text-white shadow-lg rounded-b-full">
+
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+                    <div class="flex items-center justify-center py-4">
+
+                        <h5 class="text-[16px] md:text-base font-semibold tracking-wide whitespace-nowrap">
+                            200+ Students Earn ₹40,000 / Month
+                        </h5>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </nav>
+        <div class="responsive-container mx-auto mt-5 ">
+            <div class="flex flex-col lg:flex-row items-center gap-1 sm:gap-3 lg:gap-12 mobile-stack">
+
+                <!-- LEFT CONTENT -->
+                <div class="lg:w-1/2 mobile-full-width" data-aos="fade-right" data-aos-duration="1000">
+
+
+
+
+
+
+                    <h1 class="hidden sm:block responsive-heading-1 font-extrabold text-[#111827] leading-tight mb-4">
+                        Apni City, Apne Ghar Se
+                        Instagram & Facebook ke Zariye
+                    </h1>
+
+                    <div
+                        class="hidden sm:inline-block mb-5 px-4 sm:px-6 py-2 sm:py-3 rounded-2xl bg-gradient-to-r from-[#0092B9] to-[#0092B9] text-white shadow-xl mobile-full-width">
+                        <span class="text-xl sm:text-2xl md:text-3xl font-extrabold mobile-text-center">
+                            ₹30,000 – ₹90,000 / Month
+                        </span>
+                    </div>
+
+                    <h5 class="hidden sm:block text-lg mb-7 text-[#111827] mobile-text-center">
+                        Sirf Smartphone + Internet se
+                    </h5>
+
+                    <!-- FEATURES -->
+                    <div class="hidden sm:grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8 mobile-grid-gap">
+                        <div
+                            class="flex items-center gap-3 bg-white/70 backdrop-blur-md border border-white/40 p-4 rounded-2xl shadow-md mobile-padding">
+                            <i class="material-icons text-[#0092B9] text-2xl">check_circle</i>
+                            <span class="font-semibold text-[#111827] text-overflow-fix">No Laptop Required</span>
+                        </div>
+
+                        <div
+                            class="flex items-center gap-3 bg-white/70 backdrop-blur-md border border-white/40 p-4 rounded-2xl shadow-md mobile-padding">
+                            <i class="material-icons text-[#0092B9] text-2xl">check_circle</i>
+                            <span class="font-semibold text-[#111827] text-overflow-fix">No Investment Required</span>
+                        </div>
+
+                        <div
+                            class="flex items-center gap-3 bg-white/70 backdrop-blur-md border border-white/40 p-4 rounded-2xl shadow-md mobile-padding">
+                            <i class="material-icons text-[#0092B9] text-2xl">check_circle</i>
+                            <span class="font-semibold text-[#111827] text-overflow-fix">No Ads Knowledge Needed</span>
+                        </div>
+
+                        <div
+                            class="flex items-center gap-3 bg-white/70 backdrop-blur-md border border-white/40 p-4 rounded-2xl shadow-md mobile-padding">
+                            <i class="material-icons text-[#0092B9] text-2xl">check_circle</i>
+                            <span class="font-semibold text-[#111827] text-overflow-fix">No followers</span>
+                        </div>
+                    </div>
+
+                    <!-- CTA -->
+                    <a href="https://demo1.go-drop.in/payment/complete-social-media-income-system" target="_self"
+                        class="hidden sm:flex w-full md:w-auto px-6 md:px-8 py-4 md:py-5 rounded-2xl bg-gradient-to-r from-[#0092B9] to-[#0092B9] text-white text-base md:text-lg font-extrabold shadow-2xl hover:scale-105 transition flex-col md:flex-row items-center gap-2 mobile-full-width tap-target">
+
+                        <span class="flex items-center mobile-text-center">
+                            <i class="material-icons mr-2">verified_user</i>
+                            YES, Mujhe Ye Skill Sikhni Hai
+                        </span>
+
+                        <span class="text-sm opacity-90 mobile-text-center">
+                            🔒 Secure Checkout | Lifetime Access
+                        </span>
+                    </a>
+
+                    <!-- <div class="mx-auto mt-6 mb-8 hidden lg:block">
+                <div
+                  class="p-4 sm:px-6 md:px-10 md:p-6 bg-gradient-to-t from-[#16A34A]/10 to-[#16A34A]/20 rounded-2xl border-t-4 border-[#16A34A] mobile-padding"
+                >
+                  <div class="flex items-center text-center flex-col">
+                    <div class="inline-block bg-white text-[#16A34A] p-3 md:p-4 rounded-full">
+                      <i class="material-icons text-4xl md:text-5xl">verified_user</i>
+                    </div>
+              
+                    <h2 class="responsive-heading-1 font-bold mb-6 md:mb-8 mobile-text-center text-[#111827]">
+                      30-Day 100% Money Back Guarantee
+                    </h2>
+                  </div>
+                </div>
+              </div> -->
+
+
+
+                </div>
+
+                <!-- RIGHT VIDEO -->
+                <div class="w-full lg:w-1/2 mobile-full-width" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="relative rounded-xl shadow-2xl overflow-visible mobile-full-width">
+                        <video id="introVideo"
+                            src="https://vz-52fa69c4-957.b-cdn.net/64941448-16af-411e-9c9f-a972f8a6f55b/playlist.m3u8"
+                            poster="https://vz-52fa69c4-957.b-cdn.net/742abb8e-cfed-4562-8897-462aca306b02/thumbnail_5877ee08.jpg"
+                            class="w-full aspect-video object-cover rounded-xl shadow-xl ring-4 ring-white/10 mobile-img"
+                            playsinline preload="metadata" controls controlsList="nodownload noplaybackrate"></video>
+                        <!-- Video Highlights Overlay -->
+
+                        <!-- Subtle highlight corners -->
+                        <span class="absolute top-0 left-0 w-5 h-5 bg-[#0092B9]/40 rounded-bl-xl blur-md"></span>
+
+                    </div>
+
+                    <!-- Title -->
+                    <div class="mt-4 text-center px-2 mb-2 mobile-full-width">
+                        <h4 class="responsive-heading-2 font-bold text-[#111827] mobile-text-center">
+                            Complete Social Media Income System
+                        </h4>
+
+                    </div>
+
+                    <h4
+                        class="block mx-auto lg:mx-auto mb-2 sm:mb-4 px-3 sm:px-4 py-0.5 sm:py-1 rounded-full bg-[#0092B9]/10 text-[#0092B9] text-center text-base sm:text-xl font-bold w-fit mobile-full-width mobile-text-center">
+                        1-to-1 live Doubt Solving
+                    </h4>
+
+
+
+                    <!-- CTA -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8 mobile-grid-gap lg:hidden">
+
+                        <div
+                            class="flex items-center gap-3 bg-white/70 backdrop-blur-md p-4 rounded-2xl shadow-md mobile-padding">
+                            <i class="material-icons text-[#0092B9] text-2xl">check_circle</i>
+                            <span class="font-semibold text-[#111827] text-overflow-fix">No Laptop Required</span>
+                        </div>
+
+                        <div
+                            class="flex items-center gap-3 bg-white/70 backdrop-blur-md p-4 rounded-2xl shadow-md mobile-padding">
+                            <i class="material-icons text-[#0092B9] text-2xl">check_circle</i>
+                            <span class="font-semibold text-[#111827] text-overflow-fix">No Investment Required</span>
+                        </div>
+
+                        <div
+                            class="flex items-center gap-3 bg-white/70 backdrop-blur-md p-4 rounded-2xl shadow-md mobile-padding">
+                            <i class="material-icons text-[#0092B9] text-2xl">check_circle</i>
+                            <span class="font-semibold text-[#111827] text-overflow-fix">No followers</span>
+                        </div>
+
+
+                    </div>
+
+
+
+                    <a href="https://demo1.go-drop.in/payment/complete-social-media-income-system" target="_self"
+                        class="w-full px-6 md:px-8 py-4 rounded-2xl text-white font-extrabold text-base sm:text-lg shadow-xl hover:scale-105 transition flex items-center justify-center mt-5 bg-gradient-to-r from-[#0092B9] to-[#0092B9] pulse-animation tap-target mobile-full-width">
+                        <i class="material-icons mr-2">flash_on</i>
+                        Enroll Now – ₹799
+                    </a>
+
+                    <div
+                        class="mt-8 md:mt-10 p-4 md:p-6 bg-white bg-opacity-10 rounded-2xl backdrop-blur-sm mobile-padding lg:hidden">
+                        <div class="text-center">
+                            <h3 class="responsive-heading-2 text-[#111827] font-bold mb-3 md:mb-4">
+                                Offer Ends In:
+                            </h3>
+
+                            <div class="flex justify-center space-x-3 md:space-x-4">
+
+                                <div class="bg-white text-[#0092B9] rounded-xl p-3 md:p-4">
+                                    <div class="text-xl md:text-3xl font-bold" id="hours">23</div>
+                                    <div class="text-xs md:text-sm">Hours</div>
+                                </div>
+
+                                <div class="bg-white text-[#0092B9] rounded-xl p-3 md:p-4">
+                                    <div class="text-xl md:text-3xl font-bold" id="minutes">59</div>
+                                    <div class="text-xs md:text-sm">Minutes</div>
+                                </div>
+
+                                <div class="bg-white text-[#0092B9] rounded-xl p-3 md:p-4">
+                                    <div class="text-xl md:text-3xl font-bold" id="seconds">59</div>
+                                    <div class="text-xs md:text-sm">Seconds</div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Guarantee -->
+
+
+                    <!-- Mobile version -->
+                    <div class="mx-auto mt-6 mb-8 lg:hidden max-w-md">
+                        <div
+                            class="p-6 bg-gradient-to-t from-green-100 via-green-200 to-green-300 rounded-3xl  shadow-lg transform hover:scale-105 transition-all duration-300">
+                            <div class="flex flex-col items-center text-center">
+                                <div
+                                    class="inline-block bg-white text-green-900 p-2 rounded-full shadow-md ring-2 ring-green-300">
+                                    <i class="material-icons text-3xl ">verified_user</i>
+                                </div>
+
+                                <h2 class="mt-3 text-2xl whitespace-nowrap md:text-3xl font-extrabold text-green-900">
+                                    30-Day 100% Money
+                                </h2>
+                                <h2 class=" text-2xl whitespace-nowrap md:text-3xl font-extrabold text-green-900">
+                                    Back Guarantee
+                                </h2>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Success Stories  Section  -->
+    <section class="py-12 md:py-20 bg-gradient-to-b from-[#FFFFFF] to-[#FFFFFF]" id="success">
+        <div class="responsive-container mx-auto">
+            <div class="text-center mb-12 md:mb-16" data-aos="fade-up">
+                <h2 class="responsive-heading-1 font-extrabold mb-4 text-[#111827]">Student's Feedback</h2>
+                <div class="w-24 h-1.5 bg-[#0092B9] mx-auto rounded-full mb-6"></div>
+
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10 mobile-grid-gap">
+
+                <div class="group bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100"
+                    data-aos="fade-up">
+                    <div class="success-video-container">
+                        <video controls class="w-full h-full object-cover">
+                            <source
+                                src="https://vz-52fa69c4-957.b-cdn.net/a7fd0364-eda0-474d-8910-6ab9548fb497/playlist.m3u8"
+                                type="application/x-mpegURL">
+                        </video>
+                    </div>
+
+                </div>
+
+                <div class="group bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div class="success-video-container">
+                        <video controls class="w-full h-full object-cover">
+                            <source
+                                src="https://vz-52fa69c4-957.b-cdn.net/b289bdaa-429e-47ad-89af-ce2fc60bfc5a/playlist.m3u8"
+                                type="application/x-mpegURL">
+                        </video>
+                    </div>
+
+                </div>
+
+                <div class="group bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div class="success-video-container">
+                        <video controls class="w-full h-full object-cover">
+                            <source
+                                src="https://vz-52fa69c4-957.b-cdn.net/6978bdfe-c353-4130-ad6c-cf8c5865e693/playlist.m3u8"
+                                type="application/x-mpegURL">
+                        </video>
+                    </div>
+
+                </div>
+
+                <div class="group bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100"
+                    data-aos="fade-up">
+                    <div class="success-video-container">
+                        <video controls class="w-full h-full object-cover">
+                            <source
+                                src="https://vz-52fa69c4-957.b-cdn.net/77fb434b-4ddb-4752-8db9-dc1d60ff799a/playlist.m3u8"
+                                type="application/x-mpegURL">
+                        </video>
+                    </div>
+
+                </div>
+
+                <div class="group bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div class="success-video-container">
+                        <video controls class="w-full h-full object-cover">
+                            <source
+                                src="https://vz-52fa69c4-957.b-cdn.net/cc41bcb3-20db-4530-9a3d-ea085263dd5f/playlist.m3u8"
+                                type="application/x-mpegURL">
+                        </video>
+                    </div>
+
+                </div>
+
+                <div class="group bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div class="success-video-container">
+                        <video controls class="w-full h-full object-cover">
+                            <source
+                                src="https://vz-52fa69c4-957.b-cdn.net/8bd45f89-e4b8-4f54-ba8c-ec7619f190c0/playlist.m3u8"
+                                type="application/x-mpegURL">
+                        </video>
+                    </div>
+
+                </div>
+
+
+                <div class="group bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div class="success-video-container">
+                        <video controls class="w-full h-full object-cover">
+                            <source
+                                src="https://vz-52fa69c4-957.b-cdn.net/509bc0e7-2dd1-4779-8c4d-2833f4de06b3/playlist.m3u8"
+                                type="application/x-mpegURL">
+                        </video>
+                    </div>
+
+                </div>
+
+                <div class="group bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div class="success-video-container">
+                        <video controls class="w-full h-full object-cover">
+                            <source
+                                src="https://vz-52fa69c4-957.b-cdn.net/880dc4ef-80db-4807-9326-d315628d64a3/playlist.m3u8"
+                                type="application/x-mpegURL">
+                        </video>
+                    </div>
+
+                </div>
+
+                <div class="group bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div class="success-video-container">
+                        <video controls class="w-full h-full object-cover">
+                            <source
+                                src="https://vz-52fa69c4-957.b-cdn.net/ae43c68d-0a72-42df-87eb-f871eab51102/playlist.m3u8"
+                                type="application/x-mpegURL">
+                        </video>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mt-12 md:mt-20 mobile-grid-gap">
+                <div class="text-center p-6 md:p-8 bg-[#0092B9] rounded-3xl shadow-lg mobile-padding">
+                    <div class="text-2xl md:text-3xl lg:text-4xl font-black text-white">15,00+</div>
+                    <p class="text-[#FFFFFF] text-sm font-bold mt-1">STUDENTS</p>
+                </div>
+                <div
+                    class="text-center p-6 md:p-8 bg-white rounded-3xl shadow-lg border border-gray-100 mobile-padding">
+                    <div class="text-2xl md:text-3xl lg:text-4xl font-black text-[#0092B9]">94%</div>
+                    <p class="text-gray-500 text-sm font-bold mt-1">SUCCESS RATE</p>
+                </div>
+                <div
+                    class="text-center p-6 md:p-8 bg-white rounded-3xl shadow-lg border border-gray-100 mobile-padding">
+                    <div class="text-2xl md:text-3xl lg:text-4xl font-black text-[#0092B9]">₹250k+</div>
+                    <p class="text-gray-500 text-sm font-bold mt-1">TOTAL EARNED</p>
+                </div>
+                <div
+                    class="text-center p-6 md:p-8 bg-white rounded-3xl shadow-lg border border-gray-100 mobile-padding">
+                    <div class="text-2xl md:text-3xl lg:text-4xl font-black text-[#0092B9]">30</div>
+                    <p class="text-gray-500 text-sm font-bold mt-1">DAYS REFUND</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instructor Section -->
+    <section id="about" class="py-8 md:py-12 bg-pattern">
+        <div class="responsive-container mx-auto">
+            <div class="text-center mb-10 md:mb-12" data-aos="fade-up" data-aos-duration="800">
+                <h2 class="responsive-heading-1 font-bold mb-3 md:mb-4 text-[#111827]">About me</h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="flex flex-col lg:flex-row items-center gap-reduced mobile-stack">
+                <div class="lg:w-2/5 mb-8 lg:mb-0 mobile-full-width" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="relative">
+                        <div class="rounded-3xl overflow-hidden shadow-2xl">
+                            <img src="https://i.ibb.co/4wHTGNGC/shahid-maxify2.jpg" alt="Instructor"
+                                class="w-full h-auto mobile-img">
+                        </div>
+                        <div
+                            class="absolute -bottom-4 -right-4 md:-bottom-6 md:-right-6 bg-white rounded-2xl p-4 md:p-6 shadow-xl mobile-padding">
+                            <div class="text-center">
+                                <div class="text-2xl md:text-3xl font-bold gradient-text mb-1 md:mb-2">5+</div>
+                                <div class="text-[#111827] text-sm md:text-base">Years Experience</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:w-3/5 lg:pl-8 md:pl-12 mobile-full-width" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="bg-white rounded-3xl p-6 md:p-8 card-shadow mobile-padding">
+
+                        <p class="text-base md:text-lg mb-4 md:mb-6 mobile-text-base text-[#111827]"> <strong>Hi, I'm
+                                Shahid, <span class="underline"
+                                    style="text-decoration-color: #0092B9; text-decoration-thickness: 2px; color: #0092B9;">
+                                    Co-Founder
+                                </span> and <span class="underline"
+                                    style="text-decoration-color: #0092B9; text-decoration-thickness: 2px; color: #0092B9;">
+                                    CEO
+                                </span> of Maxify Web Solutions.</strong> I've been working in the digital marketing
+                            industry for the past 5 years and have been running my own company for 3+ years. I've worked
+                            closely with real businesses at ground level and understand exactly where most people
+                            struggle in turning social media into income.</p>
+
+
+
+                        <div class="p-4 md:p-6 rounded-2xl gradient-bg text-white mb-6 md:mb-8 mobile-padding">
+                            <p class="text-lg md:text-xl font-bold mobile-text-center">This course teaches only those
+                                practical things that actually work in the real market.</p>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Benefits -->
+    <section class="py-8 md:py-12 bg-[#FFFFFF]">
+        <div class="responsive-container mx-auto">
+
+
+
+            <!-- Course Modules -->
+            <div class="bg-white rounded-3xl p-6 md:p-8 card-shadow mobile-padding" data-aos="fade-up"
+                data-aos-duration="1000">
+
+                <h3 class="responsive-heading-2 font-bold text-center mb-6 md:mb-8 text-[#111827]">
+                    What Will You Learn?
+                </h3>
+
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 mobile-grid-gap">
+
+                    <!-- Social Media Handling -->
+                    <div
+                        class="bg-white rounded-2xl p-4 md:p-6 text-center card-shadow hover:scale-105 transition duration-300">
+                        <div
+                            class="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-xl bg-[#0092B9] flex items-center justify-center">
+                            <i class="material-icons text-white text-xl md:text-2xl">manage_accounts</i>
+                        </div>
+                        <h4 class="font-bold text-sm md:text-base text-[#111827]">Social Media Handling</h4>
+                    </div>
+
+                    <!-- Social Media Marketing -->
+                    <div
+                        class="bg-white rounded-2xl p-4 md:p-6 text-center card-shadow hover:scale-105 transition duration-300">
+                        <div
+                            class="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-xl bg-[#0092B9] flex items-center justify-center">
+                            <i class="material-icons text-white text-xl md:text-2xl">campaign</i>
+                        </div>
+                        <h4 class="font-bold text-sm md:text-base text-[#111827]">Social Media Marketing</h4>
+                    </div>
+
+
+
+                    <!-- Business Building -->
+                    <div
+                        class="bg-white rounded-2xl p-4 md:p-6 text-center card-shadow hover:scale-105 transition duration-300">
+                        <div
+                            class="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-xl bg-[#0092B9] flex items-center justify-center">
+                            <i class="material-icons text-white text-xl md:text-2xl">business_center</i>
+                        </div>
+                        <h4 class="font-bold text-sm md:text-base text-[#111827]">
+                            Business Building with Zero Investment
+                        </h4>
+                    </div>
+
+                    <!-- Small Business Mindset -->
+                    <div
+                        class="bg-white rounded-2xl p-4 md:p-6 text-center card-shadow hover:scale-105 transition duration-300">
+                        <div
+                            class="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-xl bg-[#0092B9] flex items-center justify-center">
+                            <i class="material-icons text-white text-xl md:text-2xl">psychology</i>
+                        </div>
+                        <h4 class="font-bold text-sm md:text-base text-[#111827]">Small Business Mindset</h4>
+                    </div>
+
+                    <!-- Client Approach -->
+                    <div
+                        class="bg-white rounded-2xl p-4 md:p-6 text-center card-shadow hover:scale-105 transition duration-300">
+                        <div
+                            class="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-xl bg-[#0092B9] flex items-center justify-center">
+                            <i class="material-icons text-white text-xl md:text-2xl">group</i>
+                        </div>
+                        <h4 class="font-bold text-sm md:text-base text-[#111827]">Client Approach</h4>
+                    </div>
+
+                    <!-- AI Tools -->
+                    <div
+                        class="bg-white rounded-2xl p-4 md:p-6 text-center card-shadow hover:scale-105 transition duration-300">
+                        <div
+                            class="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-xl bg-[#0092B9] flex items-center justify-center">
+                            <i class="material-icons text-white text-xl md:text-2xl">smart_toy</i>
+                        </div>
+                        <h4 class="font-bold text-sm md:text-base text-[#111827]">
+                            AI Tools: ChatGPT, Gemini, Canva
+                        </h4>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+    </section>
+
+    <!-- Team Gallery Section -->
+    <section id="gallery" class="py-12 md:py-16 bg-white">
+        <div class="responsive-container mx-auto">
+
+            <!-- Section Heading -->
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="responsive-heading-1 font-extrabold text-[#111827]">
+                    Meet Our Team
+                </h2>
+                <div class="w-24 h-1.5 bg-[#0092B9] mx-auto rounded-full mt-4"></div>
+                <p class="mt-4 text-[#111827] max-w-2xl mx-auto">
+                    Yeh hai wo dedicated team jo students ko real results dilane ke liye kaam karti hai.
+                </p>
+            </div>
+
+
+
+            <!-- Full Image -->
+            <div class="w-full">
+                <img src="https://i.ibb.co/gMcpPHtm/maxify-team.png" alt="Maxify Team"
+                    class="w-full h-auto object-contain rounded-2xl shadow-lg">
+            </div>
+
+        </div>
+
+
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-12 md:py-16 bg-white">
+        <div class="responsive-container mx-auto">
+            <div class="text-center mb-10 md:mb-12" data-aos="fade-up" data-aos-duration="800">
+                <h2 class="responsive-heading-1 font-bold mb-3 md:mb-4 text-[#111827]">Aksar Puche Jane Wale Sawal (FAQ)
+                </h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="max-w-3xl mx-auto">
+                <div class="space-y-4 md:space-y-6">
+                    <div class="border border-gray-200 rounded-2xl overflow-hidden" data-aos="fade-up"
+                        data-aos-duration="800">
+                        <button
+                            class="faq-question w-full p-4 md:p-6 text-left flex justify-between items-center bg-gray-50 hover:bg-gray-100 transition tap-target">
+                            <span class="text-base md:text-xl font-medium text-overflow-fix text-[#111827]">Kya
+                                beginners ke liye hai?</span>
+                            <i class="material-icons text-[#0092B9]">expand_more</i>
+                        </button>
+                        <div class="faq-answer p-4 md:p-6 hidden">
+                            <div class="flex items-start">
+                                <i class="material-icons text-[#0092B9] mr-3 mt-1">check_circle</i>
+                                <p class="text-[#111827] text-sm md:text-base">Haan, bilkul beginner friendly hai. Zero
+                                    experience wale bhi start kar sakte hain. Course shuru se sikhaata hai basic se
+                                    advanced tak.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border border-gray-200 rounded-2xl overflow-hidden" data-aos="fade-up"
+                        data-aos-duration="800" data-aos-delay="100">
+                        <button
+                            class="faq-question w-full p-4 md:p-6 text-left flex justify-between items-center bg-gray-50 hover:bg-gray-100 transition tap-target">
+                            <span class="text-base md:text-xl font-medium text-overflow-fix text-[#111827]">Laptop
+                                zaroori hai?</span>
+                            <i class="material-icons text-[#0092B9]">expand_more</i>
+                        </button>
+                        <div class="faq-answer p-4 md:p-6 hidden">
+                            <div class="flex items-start">
+                                <i class="material-icons text-[#0092B9] mr-3 mt-1">cancel</i>
+                                <p class="text-[#111827] text-sm md:text-base">Nahi. Sirf smartphone aur internet kaafi
+                                    hai. Pure course me hum smartphone se hi kaam karna sikhaate hain.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border border-gray-200 rounded-2xl overflow-hidden" data-aos="fade-up"
+                        data-aos-duration="800" data-aos-delay="200">
+                        <button
+                            class="faq-question w-full p-4 md:p-6 text-left flex justify-between items-center bg-gray-50 hover:bg-gray-100 transition tap-target">
+                            <span class="text-base md:text-xl font-medium text-overflow-fix text-[#111827]">Kitne din me
+                                result milega?</span>
+                            <i class="material-icons text-[#0092B9]">expand_more</i>
+                        </button>
+                        <div class="faq-answer p-4 md:p-6 hidden">
+                            <div class="flex items-start">
+                                <i class="material-icons text-[#0092B9] mr-3 mt-1">check_circle</i>
+                                <p class="text-[#111827] text-sm md:text-base">1 month me result mil sakta hai, agar aap
+                                    seriously kaam karte ho. Kuch students ne 2 weeks me bhi first client le liya tha.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border border-gray-200 rounded-2xl overflow-hidden" data-aos="fade-up"
+                        data-aos-duration="800" data-aos-delay="300">
+                        <button
+                            class="faq-question w-full p-4 md:p-6 text-left flex justify-between items-center bg-gray-50 hover:bg-gray-100 transition tap-target">
+                            <span class="text-base md:text-xl font-medium text-overflow-fix text-[#111827]">Kya English
+                                aani zaroori hai?</span>
+                            <i class="material-icons text-[#0092B9]">expand_more</i>
+                        </button>
+                        <div class="faq-answer p-4 md:p-6 hidden">
+                            <div class="flex items-start">
+                                <i class="material-icons text-[#0092B9] mr-3 mt-1">cancel</i>
+                                <p class="text-[#111827] text-sm md:text-base">Nahi. Simple Hindi me kaam ho jayega.
+                                    Course bhi Hindi me hai aur aap local businesses se Hindi me hi baat karenge.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border border-gray-200 rounded-2xl overflow-hidden" data-aos="fade-up"
+                        data-aos-duration="800" data-aos-delay="400">
+                        <button
+                            class="faq-question w-full p-4 md:p-6 text-left flex justify-between items-center bg-gray-50 hover:bg-gray-100 transition tap-target">
+                            <span class="text-base md:text-xl font-medium text-overflow-fix text-[#111827]">Kya mujhe
+                                investment karna padega?</span>
+                            <i class="material-icons text-[#0092B9]">expand_more</i>
+                        </button>
+                        <div class="faq-answer p-4 md:p-6 hidden">
+                            <div class="flex items-start">
+                                <i class="material-icons text-[#0092B9] mr-3 mt-1">cancel</i>
+                                <p class="text-[#111827] text-sm md:text-base">Nahi. Is method me 1 rupya bhi invest
+                                    karna zaroori nahi. Sab tools free hain aur aap zero investment se start kar sakte
+                                    hain.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+    <!-- Final Offer Section -->
+    <section class="py-12 md:py-16 gradient-bg text-white" id="offer">
+        <div class="responsive-container mx-auto">
+            <div class="max-w-4xl mx-auto">
+
+
+                <div class="relative">
+                    <div class="offer-badge text-xs md:text-sm">Limited Time Offer</div>
+                    <div class="bg-white text-[#111827] rounded-3xl p-6 md:p-8 lg:p-12 shadow-2xl mobile-padding">
+                        <div class="flex flex-col md:flex-row justify-center items-center mb-8 md:mb-10 mobile-stack">
+                            <div class="mb-6 md:mb-0 md:mr-8 lg:mr-12 text-center">
+                                <h3 class="text-base md:text-lg mb-1 md:mb-2 mt-2 text-gray-600">Actual Price:</h3>
+                                <h4 class="text-2xl md:text-3xl lg:text-4xl font-bold line-through text-red-500">₹1,999
+                                </h4>
+                            </div>
+
+                            <div class="p-2 md:p-3 bg-[#0092B9]/10 rounded-2xl backdrop-blur-sm mobile-full-width">
+                                <div class="text-center">
+                                    <h3 class="responsive-heading-2 font-bold mb-3 md:mb-4 text-[#111827]">Offer Ends
+                                        In:</h3>
+                                    <div class="flex justify-center space-x-2 md:space-x-4">
+                                        <div
+                                            class="bg-white flex items-center justify-center font-bold gap-1 text-[#0092B9] rounded-xl p-2 md:p-4">
+                                            <div class="text-xl md:text-3xl font-bold" id="hours2">23</div>
+                                            <div class="text-lg md:text-2xl">H</div>
+                                        </div>
+                                        <div
+                                            class="bg-white flex items-center justify-center gap-1 font-bold text-[#0092B9] rounded-xl p-2 md:p-4">
+                                            <div class="text-xl md:text-3xl font-bold" id="minutes2">59</div>
+                                            <div class="text-lg md:text-2xl">M</div>
+                                        </div>
+                                        <div
+                                            class="bg-white flex items-center justify-center gap-1 font-bold text-[#0092B9] rounded-xl p-2 md:p-4">
+                                            <div class="text-xl md:text-3xl font-bold" id="seconds2">59</div>
+                                            <div class="text-lg md:text-2xl">S</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="text-center mt-6 md:mt-0">
+                                <h3 class="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0092B9]">₹799 Only</h3>
+                                <h4 class="text-base md:text-lg mb-1 md:mb-2 text-gray-600">Today Offer Price:</h4>
+                                <h4 class="text-base md:text-lg text-gray-600 mt-1 md:mt-2">One-Time Payment</h4>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-8 md:mb-10 mobile-grid-gap">
+                            <div
+                                class="flex flex-col items-center p-4 md:p-6 bg-[#0092B9]/10 rounded-2xl mobile-padding">
+                                <p class="font-bold text-base md:text-lg mb-1 md:mb-2 text-overflow-fix text-[#111827]">
+                                    Limited Time Offer</p>
+                                <p class="text-center text-gray-600 text-sm md:text-base">24 Hours Left</p>
+                            </div>
+                            <div
+                                class="flex flex-col items-center p-4 md:p-6 bg-[#0092B9]/10 rounded-2xl mobile-padding">
+                                <p class="font-bold text-base md:text-lg mb-1 md:mb-2 text-overflow-fix text-[#111827]">
+                                    Lifetime Access</p>
+                                <p class="text-center text-gray-600 text-sm md:text-base">Forever Access</p>
+                            </div>
+                            <div
+                                class="flex flex-col items-center p-4 md:p-6 bg-[#0092B9]/10 rounded-2xl mobile-padding">
+                                <p class="font-bold text-base md:text-lg mb-1 md:mb-2 text-overflow-fix text-[#111827]">
+                                    Future Updates Free</p>
+                                <p class="text-center text-gray-600 text-sm md:text-base">All New Content Free</p>
+                            </div>
+                        </div>
+
+                        <a href="https://demo1.go-drop.in/payment/complete-social-media-income-system" target="_self"
+                            class="cta-button text-lg md:text-xl font-bold py-4 md:py-6 px-6 md:px-12 rounded-xl w-full flex items-center justify-center pulse-animation tap-target mobile-full-width">
+                            <i class="material-icons mr-3 md:mr-4">shopping_cart</i>
+                            Abhi Course Join Karein – ₹799
+                        </a>
+
+                        <p class="text-center mt-6 md:mt-8 text-gray-600 text-sm md:text-base mobile-text-center">
+                            <i
+                                class="material-icons text-xs md:text-sm align-middle mr-1 md:mr-2 text-[#0092B9]">verified</i>
+                            Secure payment • 30-day money-back guarantee • Lifetime access
+                        </p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mt-8 md:mt-10 mobile-grid-gap">
+                    <div class="bg-white bg-opacity-20 p-4 md:p-6 rounded-2xl text-center mobile-padding">
+                        <i class="material-icons text-2xl md:text-3xl mb-3 md:mb-4">security</i>
+                        <p class="font-bold text-sm md:text-base text-overflow-fix text-white">100% Secure Payment</p>
+                    </div>
+                    <div class="bg-white bg-opacity-20 p-4 md:p-6 rounded-2xl text-center mobile-padding">
+                        <i class="material-icons text-2xl md:text-3xl mb-3 md:mb-4">support_agent</i>
+                        <p class="font-bold text-sm md:text-base text-overflow-fix text-white">24/7 Support Available
+                        </p>
+                    </div>
+                    <div class="bg-white bg-opacity-20 p-4 md:p-6 rounded-2xl text-center mobile-padding">
+                        <i class="material-icons text-2xl md:text-3xl mb-3 md:mb-4">video_library</i>
+                        <p class="font-bold text-sm md:text-base text-overflow-fix text-white">30+ Video Lessons</p>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Money Back Guarantee -->
+    <section class="py-12 md:py-16 bg-gradient-to-r from-green-600 to-emerald-700 text-white">
+        <div class="responsive-container mx-auto">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="inline-block bg-white text-green-700 p-3 md:p-4 rounded-full mb-6 md:mb-8">
+                    <i class="material-icons text-4xl md:text-5xl">verified_user</i>
+                </div>
+                <h2 class="responsive-heading-1 font-bold mb-6 md:mb-8">30-Day 100% Money Back Guarantee</h2>
+                <p class="text-lg md:text-xl mb-8 md:mb-10 max-w-3xl mx-auto mobile-text-center">Risk-free investment.
+                    Agar 30 days me aapko course se value nahi milti, to hum aapka paisa wapas kar denge. No questions
+                    asked.</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mobile-grid-gap">
+                    <div class="bg-white bg-opacity-20 p-6 md:p-8 rounded-3xl backdrop-blur-sm mobile-padding">
+                        <i class="material-icons text-4xl md:text-5xl mb-4 md:mb-6">thumb_up</i>
+                        <h3 class="text-xl md:text-2xl font-bold mb-3 md:mb-4">No Risk</h3>
+                        <p class="text-sm md:text-base">Try karein risk-free, paisa vasool guarantee ke saath</p>
+                    </div>
+                    <div class="bg-white bg-opacity-20 p-6 md:p-8 rounded-3xl backdrop-blur-sm mobile-padding">
+                        <i class="material-icons text-4xl md:text-5xl mb-4 md:mb-6">assignment_return</i>
+                        <h3 class="text-xl md:text-2xl font-bold mb-3 md:mb-4">Easy Refund</h3>
+                        <p class="text-sm md:text-base">Simple process, 24 hours me refund</p>
+                    </div>
+                    <div class="bg-white bg-opacity-20 p-6 md:p-8 rounded-3xl backdrop-blur-sm mobile-padding">
+                        <i class="material-icons text-4xl md:text-5xl mb-4 md:mb-6">sentiment_satisfied</i>
+                        <h3 class="text-xl md:text-2xl font-bold mb-3 md:mb-4">Satisfaction Guaranteed</h3>
+                        <p class="text-sm md:text-base">15,00+ students satisfied, 98% positive reviews</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="bg-[#111827] text-white pt-12 md:pt-16 pb-6 md:pb-8">
+        <div class="responsive-container mx-auto">
+            <!-- Footer Top -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10 mb-8 md:mb-10 mobile-grid-gap">
+                <!-- Company Info -->
+                <div>
+                    <div class="flex items-center mb-4 md:mb-6">
+                        <div
+                            class="w-10 h-10 md:w-12 md:h-12 rounded-2xl gradient-bg flex items-center justify-center mr-3 md:mr-4">
+                            <i class="material-icons text-lg md:text-xl">location_city</i>
+                        </div>
+                        <div>
+                            <h2 class="text-lg md:text-xl font-bold text-white">Apni City</h2>
+                            <p class="text-gray-400 text-sm md:text-base">Apne Ghar Se</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 mb-4 md:mb-6 text-sm md:text-base">Apne sheher ya gaon se hi Instagram aur
+                        Facebook ke zariye ₹30,000–₹90,000 mahine kamaane ka skill seekhein.</p>
+                    <div class="flex flex-wrap items-center gap-3 md:gap-4">
+
+                        <a href="https://demo1.go-drop.in/" target="_blank" rel="noopener noreferrer" class="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center
+                                  bg-gray-800 text-gray-300 rounded-xl
+                                  hover:bg-[#0092B9] hover:text-white
+                                  transition-all duration-300 hover:-translate-y-1 tap-target">
+                            <i class="fa-solid fa-globe text-sm md:text-base"></i>
+
+                        </a>
+
+                        <a href="https://www.instagram.com/maxifysolution" target="_blank" rel="noopener noreferrer"
+                            class="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center
+                                  bg-gray-800 text-gray-300 rounded-xl
+                                  hover:bg-[#0092B9] hover:text-white
+                                  transition-all duration-300 hover:-translate-y-1 tap-target">
+                            <i class="fa-brands fa-instagram text-sm md:text-base"></i>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/shahidrz?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                            target="_blank" rel="noopener noreferrer" class="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center
+                                  bg-gray-800 text-gray-300 rounded-xl
+                                  hover:bg-[#0092B9] hover:text-white
+                                  transition-all duration-300 hover:-translate-y-1 tap-target">
+                            <i class="fa-brands fa-linkedin-in text-sm md:text-base"></i>
+                        </a>
+
+                        <a href="https://youtube.com/@maxifysolution1" target="_blank" rel="noopener noreferrer" class="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center
+                                  bg-gray-800 text-gray-300 rounded-xl
+                                  hover:bg-[#0092B9] hover:text-white
+                                  transition-all duration-300 hover:-translate-y-1 tap-target">
+                            <i class="fa-brands fa-youtube text-sm md:text-base"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-base md:text-lg font-bold mb-4 md:mb-6 pb-2 border-b border-gray-700 text-white">
+                        Quick Links</h3>
+                    <ul class="space-y-3 md:space-y-4">
+                        <li><a href="#home"
+                                class="text-gray-400 hover:text-white transition flex items-center text-sm md:text-base tap-target">
+                                <i class="material-icons text-xs md:text-sm mr-2">chevron_right</i> Home
+                            </a></li>
+                        <li><a href="#about"
+                                class="text-gray-400 hover:text-white transition flex items-center text-sm md:text-base tap-target">
+                                <i class="material-icons text-xs md:text-sm mr-2">chevron_right</i> About me
+                            </a></li>
+
+                        <li><a href="#success"
+                                class="text-gray-400 hover:text-white transition flex items-center text-sm md:text-base tap-target">
+                                <i class="material-icons text-xs md:text-sm mr-2">chevron_right</i> Success Stories
+                            </a></li>
+                        <li><a href="#faq"
+                                class="text-gray-400 hover:text-white transition flex items-center text-sm md:text-base tap-target">
+                                <i class="material-icons text-xs md:text-sm mr-2">chevron_right</i> FAQ
+                            </a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-base md:text-lg font-bold mb-4 md:mb-6 pb-2 border-b border-gray-700 text-white">
+                        Contact Us</h3>
+                    <ul class="space-y-3 md:space-y-4">
+
+                        <li class="flex items-start">
+                            <i class="material-icons text-[#0092B9] mr-3 mt-1 text-sm md:text-base">email</i>
+                            <div>
+                                <p class="font-medium text-sm md:text-base text-white">Email</p>
+                                <p class="text-gray-400 text-sm md:text-base text-overflow-fix">
+                                    support@maxifyacademy.com</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="material-icons text-[#0092B9] mr-3 mt-1 text-sm md:text-base">access_time</i>
+                            <div>
+                                <p class="font-medium text-sm md:text-base text-white">Support Hours</p>
+                                <p class="text-gray-400 text-sm md:text-base">10 AM - 7 PM (Mon-Sat)</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="material-icons text-[#0092B9] mr-3 mt-1 text-sm md:text-base">location_on</i>
+                            <div>
+                                <p class="font-medium text-sm md:text-base text-white">Based In</p>
+                                <p class="text-gray-400 text-sm md:text-base">Delhi, India</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div>
+                    <h3 class="text-base md:text-lg font-bold mb-4 md:mb-6 pb-2 border-b border-gray-700 text-white">
+                        Free Resources</h3>
+                    <p class="text-gray-400 mb-4 md:mb-6 text-sm md:text-base">Free Digital Marketing Guide aur updates
+                        ke liye subscribe karein</p>
+                    <div class="mb-3 md:mb-4">
+                        <!-- <input type="email" placeholder="Your Email" class="w-full px-3 md:px-4 py-2 md:py-3 rounded-lg bg-gray-800 text-white border border-gray-700 focus:outline-none focus:border-[#0092B9] text-sm md:text-base"> -->
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="pt-6 md:pt-8 border-t border-gray-800">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="mb-4 md:mb-0">
+                        <p class="text-gray-400 text-sm md:text-base mobile-text-center">© 2023 Apni City, Apne Gaon Se.
+                            All rights reserved.</p>
+                    </div>
+
+                </div>
+
+                <!-- Disclaimer -->
+                <div class="mt-6 md:mt-8 p-4 md:p-6 bg-gray-800 rounded-xl mobile-padding">
+                    <h4 class="font-bold text-base md:text-lg mb-3 md:mb-4 flex items-center text-white">
+                        <i class="material-icons text-yellow-500 mr-2 text-base md:text-lg">warning</i>
+                        Important Disclaimer
+                    </h4>
+                    <p class="text-xs md:text-sm text-gray-400">
+                        This course is designed for educational purposes to help you build practical social media
+                        management skills. Income figures mentioned are based on potential outcomes and individual
+                        results may vary. We don't guarantee specific earnings. Your success depends on your effort,
+                        skills, and local market conditions. This is not a get-rich-quick scheme but a skill development
+                        program.
+                    </p>
+                    <p class="text-xs md:text-sm text-gray-400 mt-3 md:mt-4">
+                        *This program is not affiliated with Instagram, Facebook, or any other social media platforms
+                        mentioned.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- AOS JS for scroll animations -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        // Video management for auto-play and single playback
+        let currentPlayingVideo = null;
+
+        // Initialize main video auto-play
+        const initVideoPlayback = () => {
+            const mainVideo = document.getElementById('introVideo');
+            const successVideos = document.querySelectorAll('#success video');
+
+            if (mainVideo) {
+                // Main video auto-play with sound
+                mainVideo.muted = false; // Sound enabled
+                mainVideo.autoplay = false;
+                mainVideo.loop = true;
+
+                // Set as current playing video
+                currentPlayingVideo = mainVideo;
+
+                // Try to play the video
+                const playPromise = mainVideo.play();
+
+                if (playPromise !== undefined) {
+                    playPromise.catch(error => {
+                        console.log("Auto-play prevented:", error);
+                        // Show play button if auto-play is blocked
+                        mainVideo.controls = true;
+                    });
+                }
+            }
+
+            // Add event listeners to all success story videos
+            successVideos.forEach(video => {
+                video.addEventListener('play', () => {
+                    // Pause main video when any success video plays
+                    if (currentPlayingVideo && currentPlayingVideo !== video) {
+                        currentPlayingVideo.pause();
+                    }
+
+                    // Set current playing video
+                    currentPlayingVideo = video;
+
+                    // Pause all other success videos
+                    successVideos.forEach(otherVideo => {
+                        if (otherVideo !== video && !otherVideo.paused) {
+                            otherVideo.pause();
+                        }
+                    });
+                });
+
+                video.addEventListener('pause', () => {
+                    // If this video was the current one and it's paused,
+                    // check if we should resume main video
+                    if (currentPlayingVideo === video) {
+                        // Check if any other video is playing
+                        const anyVideoPlaying = Array.from(successVideos).some(v => !v.paused);
+
+                        // If no success video is playing, resume main video
+                        if (!anyVideoPlaying && mainVideo) {
+                            mainVideo.play();
+                            currentPlayingVideo = mainVideo;
+                        }
+                    }
+                });
+            });
+
+            // Main video event listeners
+            if (mainVideo) {
+                mainVideo.addEventListener('play', () => {
+                    // Pause all success videos when main video plays
+                    successVideos.forEach(video => {
+                        if (!video.paused) {
+                            video.pause();
+                        }
+                    });
+
+                    currentPlayingVideo = mainVideo;
+                });
+            }
+        };
+
+
+
+        // Initialize when page loads
+        document.addEventListener('DOMContentLoaded', initVideoPlayback);
+
+        // Also initialize when all resources are loaded
+        window.addEventListener('load', initVideoPlayback);
+
+        function closePopup() {
+            // ❌ tab tak close nahi hone dena jab tak data na ho
+            if (!localStorage.getItem("leadData")) {
+                alert("Please fill the form first");
+                return;
+            }
+
+            document.getElementById("leadPopup").classList.add("hidden");
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const form = document.getElementById("leadForm");
+
+            if (form) {
+                form.addEventListener("submit", async function (e) {
+                    e.preventDefault();
+
+                    const email = document.getElementById("email").value.trim();
+                    const phone = document.getElementById("phone").value.trim();
+                    
+
+                    // ✅ validation
+                    if (!email || !phone) {
+                        alert("Please fill all fields");
+                        return;
+                    }
+
+                    let ip = "";
+
+                    try {
+                        const res = await fetch("https://api.ipify.org?format=json");
+                        const data = await res.json();
+                        ip = data.ip;
+                    } catch (err) {
+                        console.log("IP fetch error:", err);
+                    }
+
+                    const leadData = { email, phone, ip };
+
+                    try {
+                        // ✅ API CALL
+                        const response = await fetch("https://demo1.go-drop.in/api/social-lead/lead", {
+                            method: "POST",
+                            headers: {
+                                "Content-Type": "application/json"
+                            },
+                            body: JSON.stringify(leadData)
+                        });
+
+                        const result = await response.json();
+                        console.log("API Response:", result);
+
+                        // ✅ success handling
+                        if (response.ok) {
+
+                            // 1. Save in localStorage
+                            localStorage.setItem("leadData", JSON.stringify(leadData));
+
+                            // 2. Save in cookies
+                            document.cookie =
+                                "leadData=" + JSON.stringify(leadData) +
+                                "; path=/; max-age=" + (60 * 60 * 24 * 30);
+
+                            // 3. Hide popup
+                            document.getElementById("leadPopup").classList.add("hidden");
+
+                            alert("Lead submitted successfully 🚀");
+
+                        } else {
+                            alert(result.message || "Something went wrong");
+                        }
+
+                    } catch (error) {
+                        console.error("API Error:", error);
+                        alert("Server error, please try again later");
+                    }
+                });
+            }
+        });
+        window.addEventListener("load", () => {
+
+            const popup = document.getElementById("leadPopup");
+            if (!popup) return;
+
+            let savedData = localStorage.getItem("leadData");
+
+            // ✅ Cookie fallback (agar localStorage empty ho)
+            if (!savedData) {
+                const cookies = document.cookie.split("; ");
+
+                for (let c of cookies) {
+                    if (c.startsWith("leadData=")) {
+                        savedData = c.replace("leadData=", "");
+                    }
+                }
+            }
+
+            console.log("Saved Data:", savedData);
+
+            // ✅ Show / Hide popup
+            if (savedData) {
+                popup.classList.add("hidden");   // hide
+            } else {
+                popup.classList.remove("hidden"); // show
+            }
+        });
+
+
+
+
+        document.addEventListener('visibilitychange', () => {
+            if (!document.hidden && currentPlayingVideo) {
+                // Try to resume the current playing video
+                const playPromise = currentPlayingVideo.play();
+                if (playPromise !== undefined) {
+                    playPromise.catch(error => {
+                        console.log("Resume prevented:", error);
+                    });
+                }
+            }
+        });
+
+        // Mobile menu toggle (existing code)
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (menuToggle && mobileMenu) {
+            menuToggle.addEventListener('click', () => {
+                mobileMenu.classList.toggle('open');
+                menuToggle.innerHTML = mobileMenu.classList.contains('open')
+                    ? '<i class="material-icons text-2xl">close</i>'
+                    : '<i class="material-icons text-2xl">menu</i>';
+            });
+        }
+
+        // Sticky nav on scroll
+        window.addEventListener('scroll', function () {
+            const nav = document.querySelector('.sticky-nav');
+            if (nav) {
+                if (window.scrollY > 50) {
+                    nav.classList.add('scrolled');
+                } else {
+                    nav.classList.remove('scrolled');
+                }
+            }
+        });
+
+        // FAQ accordion
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const icon = question.querySelector('.material-icons');
+
+                // Close all other FAQ answers
+                document.querySelectorAll('.faq-answer').forEach(item => {
+                    if (item !== answer) {
+                        item.classList.add('hidden');
+                        const otherIcon = item.previousElementSibling.querySelector('.material-icons');
+                        if (otherIcon) {
+                            otherIcon.textContent = 'expand_more';
+                        }
+                    }
+                });
+
+                // Toggle current answer
+                if (answer && icon) {
+                    answer.classList.toggle('hidden');
+                    icon.textContent = answer.classList.contains('hidden') ? 'expand_more' : 'expand_less';
+                }
+            });
+        });
+
+        // Countdown timer
+        function updateCountdown() {
+            const now = new Date();
+            const endOfDay = new Date();
+            endOfDay.setHours(23, 59, 59, 999);
+
+            const timeLeft = endOfDay - now;
+
+            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+            const hoursElement = document.getElementById('hours');
+            const minutesElement = document.getElementById('minutes');
+            const secondsElement = document.getElementById('seconds');
+            const hoursElement2 = document.getElementById('hours2');
+            const minutesElement2 = document.getElementById('minutes2');
+            const secondsElement2 = document.getElementById('seconds2');
+            const finalCountdownElement = document.getElementById('final-countdown');
+
+            if (hoursElement) hoursElement.textContent = hours.toString().padStart(2, '0');
+            if (minutesElement) minutesElement.textContent = minutes.toString().padStart(2, '0');
+            if (secondsElement) secondsElement.textContent = seconds.toString().padStart(2, '0');
+            if (hoursElement2) hoursElement2.textContent = hours.toString().padStart(2, '0');
+            if (minutesElement2) minutesElement2.textContent = minutes.toString().padStart(2, '0');
+            if (secondsElement2) secondsElement2.textContent = seconds.toString().padStart(2, '0');
+            if (finalCountdownElement) finalCountdownElement.textContent = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        }
+
+        // Initialize countdown
+        if (document.getElementById('hours')) {
+            setInterval(updateCountdown, 1000);
+            updateCountdown(); // Initial call
+        }
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Close mobile menu if open
+                    if (mobileMenu && mobileMenu.classList.contains('open')) {
+                        mobileMenu.classList.remove('open');
+                        menuToggle.innerHTML = '<i class="material-icons text-2xl">menu</i>';
+                    }
+
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Initialize AOS
+        if (typeof AOS !== 'undefined') {
+            AOS.init({
+                duration: 1000,
+                once: true,
+                offset: 100,
+                disable: window.innerWidth < 768
+            });
+
+            // Reinitialize AOS on window resize
+            let resizeTimer;
+            window.addEventListener('resize', function () {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(function () {
+                    AOS.refresh();
+                }, 250);
+            });
+        }
+
+        // Responsive helper functions
+        function checkScreenSize() {
+            const isMobile = window.innerWidth < 768;
+            const isTablet = window.innerWidth >= 768 && window.innerWidth < 1024;
+            const isDesktop = window.innerWidth >= 1024;
+
+            // Add/remove classes based on screen size
+            document.body.classList.toggle('mobile-view', isMobile);
+            document.body.classList.toggle('tablet-view', isTablet);
+            document.body.classList.toggle('desktop-view', isDesktop);
+        }
+
+        // Check screen size on load and resize
+        window.addEventListener('load', checkScreenSize);
+        window.addEventListener('resize', checkScreenSize);
+
+        // Fix for iOS viewport height
+        function setVhProperty() {
+            let vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
+        }
+
+        setVhProperty();
+        window.addEventListener('resize', setVhProperty);
+        window.addEventListener('orientationchange', setVhProperty);
+
+        // Prevent zoom on iOS input focus
+        document.addEventListener('touchstart', function (event) {
+            if (event.target.tagName === 'INPUT' || event.target.tagName === 'TEXTAREA' || event.target.tagName === 'SELECT') {
+                // Add a small delay to prevent immediate zoom
+                setTimeout(function () {
+                    event.target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }, 300);
+            }
+        });
+
+        // Improved touch handling for mobile
+        document.addEventListener('touchstart', function () { }, { passive: true });
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const links = document.querySelectorAll("a[href*='payment/complete-social-media-income-system']");
+
+            links.forEach(link => {
+                link.addEventListener("click", function (e) {
+                    e.preventDefault();
+
+                    let data = localStorage.getItem("leadData");
+
+                    // ✅ Cookie fallback
+                    if (!data) {
+                        const cookies = document.cookie.split("; ");
+                        for (let c of cookies) {
+                            if (c.startsWith("leadData=")) {
+                                data = c.replace("leadData=", "");
+                            }
+                        }
+                    }
+
+                    if (data) {
+                        try {
+                            const lead = JSON.parse(data);
+
+                            // ✅ optional cleanup
+                            localStorage.removeItem("popupShown");
+
+                            const redirectUrl = `https://demo1.go-drop.in/payment/complete-social-media-income-system?email=${lead.email}&phone=${lead.phone}`;
+
+                            window.location.href = redirectUrl;
+
+                        } catch (err) {
+                            console.log("Invalid lead data");
+                            window.location.href = link.href;
+                        }
+                    } else {
+                        window.location.href = link.href;
+                    }
+                });
+            });
+
+        });
+
+
+    </script>
+
+    <!-- 🔥 Lead Popup -->
+    <div id="leadPopup" class="fixed inset-0 bg-black/80 flex items-center justify-center z-50 hidden font-[Inter] p-2">
+
+        <!-- Modal -->
+        <div class="
+bg-[#f3f4f6] 
+w-full h-full
+flex items-center justify-center
+p-3
+">
+
+    <!-- MAIN CARD -->
+    <div class="
+    w-full max-w-md
+    bg-white 
+    rounded-2xl
+    p-5
+    shadow-md
+    ">
+
+        <!-- Heading -->
+        <h3 class="!text-xl font-bold text-gray-800 leading-snug">
+            Learn 3 Powerful Ways to Turn Social Media Into Income
+        </h3>
+
+        <p class="text-gray-500 mt-2 text-sm">
+            Register Now for watch free video
+        </p>
+
+        <!-- Profile Card -->
+        <div class="
+        flex items-center gap-3 
+        bg-gray-50 
+        rounded-xl 
+        p-3 mt-4 mb-5
+        shadow-sm
+        ">
+
+            <!-- Avatar -->
+            <div class="w-20 h-20 rounded-full flex items-center justify-center text-white text-lg font-bold">
+                <img src="https://i.ibb.co/pjZJZ5zr/AVATAR-IMAGE.png" alt="">
+            </div>
+
+            <!-- Text -->
+            <div>
+                <p class="font-semibold text-gray-900 text-base">
+                    Shahid Raza 
+                </p>
+
+                <p class="text-gray-500 text-sm leading-snug">
+                    
+I help people earn money using Social Media <br>| Digital Marketing Expert & Educator
+                </p>
+            </div>
+        </div>
+
+        <!-- FORM -->
+        <form id="leadForm" class="space-y-4">
+
+            <!-- Name -->
+            <div>
+                <label class="text-sm font-medium">
+                    Name <span class="text-red-500">*</span>
+                </label>
+                <input type="text" required
+                    class="w-full mt-1 p-3 rounded-lg border border-gray-200 
+                    focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm">
+            </div>
+
+            <!-- Email -->
+            <div>
+                <label class="text-sm font-medium">
+                    Email <span class="text-red-500">*</span>
+                </label>
+                <input type="email" required id="email"
+                    class="w-full mt-1 p-3 rounded-lg border border-gray-200 
+                    focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm">
+            </div>
+
+            <!-- Phone -->
+            <div>
+                <label class="text-sm font-medium">
+                    Whatsapp Number <span class="text-red-500">*</span>
+                </label>
+
+                <div class="relative mt-1">
+
+                    <!-- Flag -->
+                    <span class="absolute left-3 top-1/2 -translate-y-1/2">
+                        <img src="https://i.ibb.co/MxSQH3Dr/india.png"
+                            class="w-5 h-5 rounded-sm">
+                    </span>
+
+                    <!-- Input -->
+                    <input type="tel" required id="phone"
+                        class="w-full pl-10 pr-3 p-3 rounded-lg border border-gray-200
+                        focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm">
+                </div>
+            </div>
+
+            <!-- WhatsApp Note -->
+            <p class="text-xs text-gray-500 flex items-center gap-1">
+                <span>You will get updates on your</span>
+                <img src="https://i.ibb.co/BWRTgw8/whatsapp.png" class="w-4 h-4">
+                <span class="font-medium text-gray-700">WhatsApp</span>
+            </p>
+
+            <!-- Button -->
+            <button type="submit"
+                class="w-full bg-blue-600 hover:bg-blue-700 
+                text-white py-3 rounded-xl font-semibold text-base transition">
+                Register Now 
+            </button>
+
+        </form>
+
+    </div>
+</div>
+    </div>
+
+    <script>
+        const popup = document.getElementById("leadPopup");
+        const video = document.getElementById("introVideo");
+
+        // PAGE LOAD
+        window.onload = function () {
+            // STOP video (just in case)
+            if (video) video.pause();
+
+            // 🔥 FULL SCROLL LOCK
+            document.body.style.overflow = "hidden";
+            document.documentElement.style.overflow = "hidden";
+            document.body.style.position = "fixed";
+            document.body.style.width = "100%";
+        };
+    </script>
+
+    <script>
+        const form = document.getElementById("leadForm");
+
+        form.addEventListener("submit", function (e) {
+            e.preventDefault(); // optional (agar backend nahi hai)
+
+            // Close popup
+            popup.classList.add("hidden");
+
+            // Enable scroll
+            document.body.style.overflow = "auto";
+            document.documentElement.style.overflow = "auto";
+            document.body.style.position = "static";
+
+            // ▶️ Play video AFTER submit
+            if (video) {
+                video.play();
+            }
+        });
+    </script>
+
+    <script>
+        function isPopupOpen() {
+            // generic check (koi bhi visible popup detect karega)
+            const popups = document.querySelectorAll('div');
+
+            for (let el of popups) {
+                const style = window.getComputedStyle(el);
+
+                // agar koi element screen pe fixed + visible hai (popup type)
+                if (
+                    style.position === "fixed" &&
+                    style.display !== "none" &&
+                    style.visibility !== "hidden" &&
+                    el.offsetHeight > 100
+                ) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        // 🔥 Har 500ms check karega
+        setInterval(() => {
+            if (isPopupOpen()) {
+                document.querySelectorAll("video").forEach(v => {
+                    v.pause();
+                });
+            }
+        }, 500);
+
+        // 🔥 Extra safety (agar user play dabaye)
+        document.querySelectorAll("video").forEach(v => {
+            v.addEventListener("play", () => {
+                if (isPopupOpen()) {
+                    v.pause();
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
