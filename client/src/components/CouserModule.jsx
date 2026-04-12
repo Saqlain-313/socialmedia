@@ -1,4 +1,12 @@
 import React from "react";
+import {
+  MdManageAccounts,
+  MdCampaign,
+  MdBusinessCenter,
+  MdPsychology,
+  MdGroup,
+  MdSmartToy,
+} from "react-icons/md";
 
 const CourseModules = () => {
   return (
@@ -20,9 +28,7 @@ const CourseModules = () => {
             {/* Social Media Handling */}
             <div className="bg-white rounded-2xl p-4 md:p-6 text-center card-shadow hover:scale-105 transition duration-300">
               <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-xl bg-[#0092B9] flex items-center justify-center">
-                <i className="material-icons text-white text-xl md:text-2xl">
-                  manage_accounts
-                </i>
+                <MdManageAccounts className="text-white text-xl md:text-2xl" />
               </div>
               <h4 className="font-bold text-sm md:text-base text-[#111827]">
                 Social Media Handling
@@ -32,9 +38,7 @@ const CourseModules = () => {
             {/* Social Media Marketing */}
             <div className="bg-white rounded-2xl p-4 md:p-6 text-center card-shadow hover:scale-105 transition duration-300">
               <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-xl bg-[#0092B9] flex items-center justify-center">
-                <i className="material-icons text-white text-xl md:text-2xl">
-                  campaign
-                </i>
+                <MdCampaign className="text-white text-xl md:text-2xl" />
               </div>
               <h4 className="font-bold text-sm md:text-base text-[#111827]">
                 Social Media Marketing
@@ -44,9 +48,7 @@ const CourseModules = () => {
             {/* Business Building */}
             <div className="bg-white rounded-2xl p-4 md:p-6 text-center card-shadow hover:scale-105 transition duration-300">
               <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-xl bg-[#0092B9] flex items-center justify-center">
-                <i className="material-icons text-white text-xl md:text-2xl">
-                  business_center
-                </i>
+                <MdBusinessCenter className="text-white text-xl md:text-2xl" />
               </div>
               <h4 className="font-bold text-sm md:text-base text-[#111827]">
                 Business Building with Zero Investment
@@ -56,9 +58,7 @@ const CourseModules = () => {
             {/* Small Business Mindset */}
             <div className="bg-white rounded-2xl p-4 md:p-6 text-center card-shadow hover:scale-105 transition duration-300">
               <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-xl bg-[#0092B9] flex items-center justify-center">
-                <i className="material-icons text-white text-xl md:text-2xl">
-                  psychology
-                </i>
+                <MdPsychology className="text-white text-xl md:text-2xl" />
               </div>
               <h4 className="font-bold text-sm md:text-base text-[#111827]">
                 Small Business Mindset
@@ -68,9 +68,7 @@ const CourseModules = () => {
             {/* Client Approach */}
             <div className="bg-white rounded-2xl p-4 md:p-6 text-center card-shadow hover:scale-105 transition duration-300">
               <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-xl bg-[#0092B9] flex items-center justify-center">
-                <i className="material-icons text-white text-xl md:text-2xl">
-                  group
-                </i>
+                <MdGroup className="text-white text-xl md:text-2xl" />
               </div>
               <h4 className="font-bold text-sm md:text-base text-[#111827]">
                 Client Approach
@@ -80,9 +78,7 @@ const CourseModules = () => {
             {/* AI Tools */}
             <div className="bg-white rounded-2xl p-4 md:p-6 text-center card-shadow hover:scale-105 transition duration-300">
               <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-xl bg-[#0092B9] flex items-center justify-center">
-                <i className="material-icons text-white text-xl md:text-2xl">
-                  smart_toy
-                </i>
+                <MdSmartToy className="text-white text-xl md:text-2xl" />
               </div>
               <h4 className="font-bold text-sm md:text-base text-[#111827]">
                 AI Tools: ChatGPT, Gemini, Canva
