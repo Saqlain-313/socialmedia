@@ -1,4 +1,9 @@
 import React, { useState } from "react";
+import {
+  MdExpandMore,
+  MdCheckCircle,
+  MdCancel,
+} from "react-icons/md";
 
 const FAQSection = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -8,7 +13,7 @@ const FAQSection = () => {
       question: "Kya beginners ke liye hai?",
       answer:
         "Haan, bilkul beginner friendly hai. Zero experience wale bhi start kar sakte hain. Course shuru se sikhaata hai basic se advanced tak.",
-      icon: "check_circle",
+      icon: "check",
     },
     {
       question: "Laptop zaroori hai?",
@@ -20,7 +25,7 @@ const FAQSection = () => {
       question: "Kitne din me result milega?",
       answer:
         "1 month me result mil sakta hai, agar aap seriously kaam karte ho. Kuch students ne 2 weeks me bhi first client le liya tha.",
-      icon: "check_circle",
+      icon: "check",
     },
     {
       question: "Kya English aani zaroori hai?",
@@ -56,46 +61,56 @@ const FAQSection = () => {
           <div className="section-divider"></div>
         </div>
 
-        <div className="max-w-3xl mx-auto">
-          <div className="space-y-4 md:space-y-6">
+        {/* FAQ LIST */}
+        <div className="max-w-3xl mx-auto space-y-4 md:space-y-5">
 
-            {faqs.map((faq, index) => (
-              <div
-                key={index}
-                className="border border-gray-200 rounded-2xl overflow-hidden"
-                data-aos="fade-up"
-                data-aos-duration="800"
+          {faqs.map((faq, index) => (
+            <div
+              key={index}
+              className="border border-gray-200 rounded-2xl overflow-hidden card-shadow"
+              data-aos="fade-up"
+              data-aos-duration="800"
+            >
+
+              {/* QUESTION */}
+              <button
+                onClick={() => toggleFAQ(index)}
+                className="faq-question w-full p-4 md:p-5 flex justify-between items-center bg-gray-50 hover:bg-gray-100 transition tap-target"
               >
-                <button
-                  onClick={() => toggleFAQ(index)}
-                  className="faq-question w-full p-4 md:p-6 text-left flex justify-between items-center bg-gray-50 hover:bg-gray-100 transition tap-target"
-                >
-                  <span className="text-base md:text-xl font-medium text-overflow-fix text-[#111827]">
-                    {faq.question}
-                  </span>
-                  <i className="material-icons text-[#0092B9]">
-                    expand_more
-                  </i>
-                </button>
+                <span className="text-base md:text-lg font-medium text-[#111827] text-left text-overflow-fix">
+                  {faq.question}
+                </span>
 
-                <div
-                  className={`faq-answer p-4 md:p-6 ${
-                    openIndex === index ? "block" : "hidden"
+                <MdExpandMore
+                  className={`text-[#0092B9] text-2xl transition-transform duration-300 ${
+                    openIndex === index ? "rotate-180" : ""
                   }`}
-                >
-                  <div className="flex items-start">
-                    <i className="material-icons text-[#0092B9] mr-3 mt-1">
-                      {faq.icon}
-                    </i>
-                    <p className="text-[#111827] text-sm md:text-base">
-                      {faq.answer}
-                    </p>
-                  </div>
+                />
+              </button>
+
+              {/* ANSWER */}
+              <div
+                className={`faq-answer px-4 md:px-5 pb-5 ${
+                  openIndex === index ? "block" : "hidden"
+                }`}
+              >
+                <div className="flex items-start gap-3 pt-2">
+
+                  {faq.icon === "check" ? (
+                    <MdCheckCircle className="text-[#0092B9] mt-1 text-lg" />
+                  ) : (
+                    <MdCancel className="text-[#0092B9] mt-1 text-lg" />
+                  )}
+
+                  <p className="text-[#111827] text-sm md:text-base leading-relaxed">
+                    {faq.answer}
+                  </p>
                 </div>
               </div>
-            ))}
 
-          </div>
+            </div>
+          ))}
+
         </div>
 
       </div>

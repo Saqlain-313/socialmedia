@@ -1,67 +1,83 @@
 import React from "react";
+import {
+  MdVerified,
+  MdThumbUp,
+  MdAssignmentReturn,
+  MdSentimentSatisfied,
+} from "react-icons/md";
 
 const GuaranteeSection = () => {
   return (
-    <section className="py-12 md:py-16 bg-gradient-to-r from-green-600 to-emerald-700 text-white">
-      <div className="responsive-container mx-auto">
-        <div className="max-w-4xl mx-auto text-center">
+    <section className="py-16 md:py-24 bg-gradient-to-br from-green-600 via-green-700 to-emerald-800 text-white">
 
-          <div className="inline-block bg-white text-green-700 p-3 md:p-4 rounded-full mb-6 md:mb-8">
-            <i className="material-icons text-4xl md:text-5xl">
-              verified_user
-            </i>
+      <div className="max-w-6xl !mx-auto px-4 text-center">
+
+        {/* ICON */}
+        <div className="flex justify-center mb-6">
+          <div className="bg-white text-green-700 p-4 rounded-full shadow-lg">
+            <MdVerified className="text-4xl md:text-5xl" />
+          </div>
+        </div>
+
+        {/* HEADING */}
+        <h2 className="text-3xl md:text-5xl font-extrabold mb-6 leading-tight">
+          30-Day 100% Money Back <br className="hidden md:block" />
+          Guarantee
+        </h2>
+
+        {/* SUBTEXT */}
+        <p className="text-base md:text-lg text-green-100 max-w-3xl mx-auto mb-12 leading-relaxed">
+          Risk-free investment. Agar 30 days me aapko course se value nahi milti,
+          to hum aapka paisa wapas kar denge. No questions asked.
+        </p>
+
+        {/* CARDS */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+
+          {/* CARD 1 */}
+          <div className="bg-white/20 backdrop-blur-lg rounded-2xl p-8 text-center shadow-lg hover:scale-105 transition">
+
+            <MdThumbUp className="text-4xl md:text-5xl mx-auto mb-4" />
+
+            <h3 className="text-xl md:text-2xl font-bold mb-3">
+              No Risk
+            </h3>
+
+            <p className="text-green-100 text-sm md:text-base">
+              Try karein risk-free, paisa vasool guarantee ke saath
+            </p>
           </div>
 
-          <h2 className="responsive-heading-1 font-bold mb-6 md:mb-8">
-            30-Day 100% Money Back Guarantee
-          </h2>
+          {/* CARD 2 */}
+          <div className="bg-white/20 backdrop-blur-lg rounded-2xl p-8 text-center shadow-lg hover:scale-105 transition">
 
-          <p className="text-lg md:text-xl mb-8 md:mb-10 max-w-3xl mx-auto mobile-text-center">
-            Risk-free investment. Agar 30 days me aapko course se value nahi milti,
-            to hum aapka paisa wapas kar denge. No questions asked.
-          </p>
+            <MdAssignmentReturn className="text-4xl md:text-5xl mx-auto mb-4" />
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mobile-grid-gap">
+            <h3 className="text-xl md:text-2xl font-bold mb-3">
+              Easy Refund
+            </h3>
 
-            <div className="bg-white bg-opacity-20 p-6 md:p-8 rounded-3xl backdrop-blur-sm mobile-padding">
-              <i className="material-icons text-4xl md:text-5xl mb-4 md:mb-6">
-                thumb_up
-              </i>
-              <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4">
-                No Risk
-              </h3>
-              <p className="text-sm md:text-base">
-                Try karein risk-free, paisa vasool guarantee ke saath
-              </p>
-            </div>
+            <p className="text-green-100 text-sm md:text-base">
+              Simple process, 24 hours me refund
+            </p>
+          </div>
 
-            <div className="bg-white bg-opacity-20 p-6 md:p-8 rounded-3xl backdrop-blur-sm mobile-padding">
-              <i className="material-icons text-4xl md:text-5xl mb-4 md:mb-6">
-                assignment_return
-              </i>
-              <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4">
-                Easy Refund
-              </h3>
-              <p className="text-sm md:text-base">
-                Simple process, 24 hours me refund
-              </p>
-            </div>
+          {/* CARD 3 */}
+          <div className="bg-white/20 backdrop-blur-lg rounded-2xl p-8 text-center shadow-lg hover:scale-105 transition">
 
-            <div className="bg-white bg-opacity-20 p-6 md:p-8 rounded-3xl backdrop-blur-sm mobile-padding">
-              <i className="material-icons text-4xl md:text-5xl mb-4 md:mb-6">
-                sentiment_satisfied
-              </i>
-              <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4">
-                Satisfaction Guaranteed
-              </h3>
-              <p className="text-sm md:text-base">
-                15,00+ students satisfied, 98% positive reviews
-              </p>
-            </div>
+            <MdSentimentSatisfied className="text-4xl md:text-5xl mx-auto mb-4" />
 
+            <h3 className="text-xl md:text-2xl font-bold mb-3">
+              Satisfaction Guaranteed
+            </h3>
+
+            <p className="text-green-100 text-sm md:text-base">
+              15,00+ students satisfied, 98% positive reviews
+            </p>
           </div>
 
         </div>
+
       </div>
     </section>
   );
